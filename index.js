@@ -1,4 +1,5 @@
 const Discord = require("discord.js");
+      require("dotenv").config();
 const client = new Discord.Client({
 	disableMentions: 'everyone',
 	messageCacheMaxSize: 150,
@@ -52,4 +53,4 @@ client.on("ready", async() =>{
   // ==============================================================================================================
   
 })
-client.login("ODMzNTk0MzM1NDI1NDYyMzU2.YH0nOA.7tedpgqr7ij2ly6naP6ix3g6eKA")
+client.login(process.env.token)
