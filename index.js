@@ -40,12 +40,12 @@ client.on("ready", async() =>{
     const adB = await guild.members.cache.filter(m => m.roles.cache.has(admR.id) && m.user.presence.status !== "offline")
     const EMBED = new Discord.MessageEmbed()
     ch = await guild.channels.cache.get("807646363965587486")
-    ch.setTopic(`========= Offline / Invisible ADMINS: ${adA} || Online ADMINS: ${adB} =========
-                 ========= Offline / Invisible MODS: ${modA}  || Online MODS: ${modB}  =========`)
+    ch.setTopic(`========= Offline / Invisible ADMINS: ${adA.size} || Online ADMINS: ${adB.size} =========
+                 ========= Offline / Invisible MODS: ${modA.size}  || Online MODS: ${modB.size}  =========`)
   
    setInterval(async()=>{
-      ch.setTopic(`========= Offline / Invisible ADMINS: ${adA} || Online ADMINS: ${adB} =========
-                 ========= Offline / Invisible MODS: ${modA}  || Online MODS: ${modB}  =========`)   
+      ch.setTopic(`========= Offline / Invisible ADMINS: ${adA.size} || Online ADMINS: ${adB.size} =========
+                 ========= Offline / Invisible MODS: ${modA.size}  || Online MODS: ${modB.size}  =========`)   
   }, 60000)
 
   // --------------------------------------------------------------------------------------------------------------
